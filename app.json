@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "SpeakISL",
+    "slug": "SpeakISL",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/app_logo.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/app_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/app_logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.speakisl.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "500fc760-547f-41c1-a088-87973063be75"
+      }
+    }
+  }
+}
