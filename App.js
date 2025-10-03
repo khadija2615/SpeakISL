@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { 
   StyleSheet, View, Text, TextInput, ScrollView, 
-  Image, Dimensions, TouchableOpacity, Button, Platform 
+  Image, Dimensions, TouchableOpacity, Button, Platform,
 } from 'react-native';
 import * as Speech from 'expo-speech';
+
 
 
 const ISL_IMAGES = {
@@ -35,6 +36,7 @@ const ISL_IMAGES = {
   'Z': require('./assets/Z.jpeg'),
 };
 const APP_LOGO = require ('./assets/app_logo.png');
+
 
 export default function App() {
   const [inputText, setInputText] = useState('');
@@ -175,7 +177,7 @@ export default function App() {
         <Button
           title={`Switch to ${activeScreen === 'text-to-sign' ? 'Sign-to-Voice' : 'Text-to-Sign'} Mode`}
           onPress={() => setActiveScreen(activeScreen === 'text-to-sign' ? 'sign-to-text' : 'text-to-sign')}
-          color="#1E90FF"
+          color="#f5a134f9"
         />
       </View>
       <Text style={styles.attributionText}>
@@ -187,9 +189,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     padding: 10,
     paddingTop: 40,
+    backgroundColor:'#E8F5E9',
     },
     inputContainer:{
       display:'flex',
@@ -203,10 +205,11 @@ const styles = StyleSheet.create({
       width: 75,
       height: '50',
       textAlign:'center',
-      borderColor: '#ccc',
+    backgroundColor: '#FFC107',
+    borderColor : '#FFC107',
     borderWidth: 1,
     borderRadius: 10,
-    borderBottomWidth:1
+    borderBottomWidth:1,
     },
     speakButtonText: {
       width: '100%',
@@ -221,14 +224,18 @@ const styles = StyleSheet.create({
   },
 
   logoContainer: {
-    marginBottom: 10,
+    
     marginTop: 10,
-  },
+    marginBottom:10,
+    display:'flex'
+  },  
   logoImage: {
-    width: 200, 
-    height: 70, 
-    resizeMode: 'contain',
+  width: '200',
+  height: '70',
+  resizeMode: 'contain',
   },
+
+
 
   header: {
     fontSize: 32,
@@ -238,24 +245,25 @@ const styles = StyleSheet.create({
   },
   subHeader: {
     fontSize: 18,
-    color: '#666',
+    color: '#38b00dff',
     marginBottom: 20,
   },
   input: {
     height: 50,
-    borderColor: '#ccc',
+    borderColor: '#ff8800ff',
     borderWidth: 1,
     borderRadius: 10,
     paddingHorizontal: 15,
     fontSize: 18,
     marginBottom: 20,
     flex:1,
+    color:'#1f1f1fff'
   },
   signDisplayContainer: {
     flex: 1,
     width: '100%',
     minHeight: 200,
-    backgroundColor: '#F0F0F0',
+    backgroundColor: '#c4e1f9ff',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -272,9 +280,9 @@ const styles = StyleSheet.create({
   signImageContainer: {
     overflow: 'hidden',
     margin: 2,
-    backgroundColor: '#fff',
-    borderRadius: 10,
+    backgroundColor: '#ffffffff',
     shadowColor: '#000',
+    borderRadius: 10,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
@@ -290,7 +298,7 @@ const styles = StyleSheet.create({
   placeholder: {
     fontSize: 18,
     textAlign: 'center',
-    color: '#888',
+    color: '#2a9005ff',
     padding: 20,
   },
   // --- Sign Grid Styles ---
@@ -302,7 +310,7 @@ const styles = StyleSheet.create({
   },
   signGridItem: {
     margin: 5,
-    backgroundColor: '#eee',
+    backgroundColor: '#ffffffff',
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
